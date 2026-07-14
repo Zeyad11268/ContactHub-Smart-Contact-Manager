@@ -1,0 +1,805 @@
+/* ========================================
+   VARIABLES
+   No CSS custom properties are currently defined in this project.
+   Colors are used inline/per-rule below (kept as-is to avoid
+   changing visual output).
+======================================== */
+
+/* ========================================
+   RESET
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f9fc;
+}
+
+main {
+  margin-top: 80px;
+}
+
+/* ========================================
+   UTILITIES
+======================================== */
+.fs-7 {
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background-color: aliceblue;
+  opacity: 0.95;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bg-perple {
+  background-color: #6b30fb;
+}
+
+h1 span {
+  color: #6b30fb;
+}
+
+.add-btn {
+  background: linear-gradient(to right, #7c24fd, #5238f6);
+  border-color: #6b30fb;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  color: white;
+  box-shadow:
+    inset 0 0 5px #6b30fb,
+    0 0 10px #6b30fb;
+  transform: translateY(-2px);
+}
+
+/* Shared with the contact-card footer action buttons
+   (base .action-btn rule is defined in the Contact Cards section below) */
+.action-btn:hover {
+  background-color: rgb(191, 191, 191);
+  border-radius: 5px;
+}
+
+/* ========================================
+   CONTACT CARDS
+======================================== */
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 14px;
+}
+
+.contact-card {
+  border: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+}
+
+.card-body {
+  padding: 16px;
+}
+
+/* Base avatar circle/square shared by the main contact card avatar
+   and the sidebar contact-row avatar. Size/color are scoped per
+   context below so the two contexts don't conflict. */
+.avatar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contact-card .avatar {
+  width: 54px;
+  height: 54px;
+
+  border-radius: 18px;
+
+  font-size: 1.25rem;
+
+  background: #10b981;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  border-radius: 20px;
+}
+
+.contact-name {
+  margin: 0;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.contact-title {
+  flex: 1;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 8px;
+
+  color: #6b7280;
+  font-size: 0.92rem;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-content {
+  padding-left: 4px;
+}
+
+.info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 8px;
+
+  font-size: 0.65rem;
+}
+
+.phone-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.email-icon {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.location-icon {
+  background: #dcfce7;
+  color: #059669;
+}
+
+.address {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-footer {
+  padding: 12px 16px;
+
+  background: #fff;
+  border-top: 1px solid #eef2f7;
+}
+
+/* Shared with the navbar icon buttons
+   (.action-btn:hover rule is defined in the Navbar section above) */
+.action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 10px;
+}
+
+.phone-btn {
+  background: #dcfce7;
+  color: #059669;
+}
+
+.mail-btn {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.action-icons {
+  display: flex;
+  gap: 18px;
+
+  color: #98a2b3;
+  font-size: 1rem;
+}
+
+.action-icons i {
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.action-icons .fav-icon:hover {
+  color: #f3f304;
+}
+
+.action-icons .emg-icon:hover {
+  color: #ef4759;
+}
+
+.action-icons .edit-icon:hover {
+  color: #2563eb;
+}
+
+.action-icons .del-icon:hover {
+  color: #ff0019;
+}
+
+/* ========================================
+   SIDEBAR (Favorites / Emergency)
+======================================== */
+.card-wrapper {
+  margin: 0 auto 28px auto;
+}
+
+.outer-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+
+  padding: 22px 22px 18px 22px;
+}
+
+.favorites-header {
+  background: linear-gradient(135deg, #fdf3dd, #fdeecb);
+}
+
+.emergency-header {
+  background: linear-gradient(135deg, #fbe3e3, #fbdada);
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 14px;
+
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.favorites-icon {
+  background: linear-gradient(135deg, #f7a53b, #f28c1f);
+}
+
+.emergency-icon {
+  background: linear-gradient(135deg, #ef4759, #e21f39);
+}
+
+.header-text {
+  margin-left: 10px;
+}
+
+.header-text h5 {
+  margin: 0;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  color: #1f2430;
+}
+
+.header-text p {
+  margin: 2px 0 0 0;
+
+  font-size: 0.6rem;
+  color: #8b909c;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+
+  padding: 16px 22px;
+
+  background: #fff;
+}
+
+.noFavorits p,
+.noEmergency p {
+  padding: 30px 22px;
+}
+
+.contact-row .avatar {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 12px;
+
+  font-size: 0.85rem;
+  background: linear-gradient(135deg, #17a583, #0f8f72);
+}
+
+.contact-row .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  border-radius: 12px;
+}
+
+.contact-info {
+  margin-left: 14px;
+  flex-grow: 1;
+}
+
+.contact-info h6 {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: #1f2430;
+}
+
+.contact-info p {
+  margin: 2px 0 0 0;
+
+  font-size: 0.85rem;
+  color: #9096a2;
+}
+
+.call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 12px;
+}
+
+.call-btn-green {
+  background: #d7f2e6;
+  color: #1cb87c;
+}
+
+/* ========================================
+   MODAL / FORM
+======================================== */
+
+.modal-dialog {
+  max-width: 450px;
+}
+
+.modal-content {
+  height: 100vh;
+  max-height: 100vh;
+
+  border: none;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.modal-header {
+  flex-shrink: 0;
+
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #ececec;
+  background: #fff;
+}
+
+.modal-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.modal-body {
+  flex: 1;
+
+  padding: 24px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.user-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 90px;
+  height: 90px;
+  margin: auto;
+
+  border-radius: 50%;
+
+  font-size: 2.4rem;
+  color: #fff;
+
+  background: linear-gradient(180deg, #4f8ef7, #2563eb);
+}
+
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 12px;
+  padding: 10px 16px;
+
+  font-size: 0.95rem;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  background: #f3f4f6;
+
+  transition: 0.2s;
+}
+
+.upload-btn:hover {
+  background: #e5e7eb;
+}
+
+.form-label {
+  margin-bottom: 6px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-control,
+.form-select {
+  height: 46px;
+  padding-inline: 14px;
+
+  font-size: 0.95rem;
+
+  border-radius: 12px;
+}
+
+textarea.form-control {
+  height: 100px;
+  padding-top: 12px;
+
+  resize: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #4d8df5;
+  box-shadow: none;
+}
+
+.form-check {
+  margin-top: 10px;
+}
+
+.modal-footer {
+  flex-shrink: 0;
+
+  padding: 18px 24px;
+
+  border-top: 1px solid #ececec;
+  background: #fff;
+}
+
+.modal-footer .btn {
+  padding: 10px 18px;
+
+  font-size: 0.95rem;
+
+  border-radius: 10px;
+}
+
+.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+
+  font-size: 0.9rem;
+}
+
+.form-select {
+  color: #374151;
+}
+
+.form-select:invalid {
+  color: #9ca3af;
+}
+
+/* Scrollbar */
+
+.modal-body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #b4b4b8;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0.75rem;
+  }
+
+  .modal-content {
+    height: 95vh;
+    max-height: 95vh;
+
+    border-radius: 18px;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 18px;
+  }
+
+  .user-avatar {
+    width: 80px;
+    height: 80px;
+
+    font-size: 2rem;
+  }
+
+  .modal-title {
+    font-size: 1.35rem;
+  }
+}
+/* ========================================
+   BADGES
+======================================== */
+.contact-badge {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+  color: #fff;
+}
+
+.favorite-badge {
+  top: -4px;
+  right: -4px;
+
+  background: #ffc107;
+}
+
+.emergency-badge {
+  bottom: -4px;
+  right: -4px;
+
+  background: #dc3545;
+}
+
+.contact-badge-work {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  margin-top: 5px;
+  padding: 8px;
+
+  font-size: 10px;
+  font-weight: 600;
+  color: #7c3aed;
+
+  background: #f2e8ff;
+  border-radius: 10px;
+}
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+.empty-state {
+  min-height: 420px;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 96px;
+  height: 96px;
+
+  margin-bottom: 1.5rem;
+
+  border-radius: 24px;
+
+  font-size: 2.7rem;
+  color: #c4cbd6;
+
+  background: #f3f4f6;
+}
+
+.empty-title {
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5b667a;
+}
+
+.empty-text {
+  margin: 0;
+
+  font-size: 1.15rem;
+  color: #9aa3b2;
+}
+
+/* ========================================
+   DASHBOARD STAT CARDS
+======================================== */
+.stats-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 78px;
+  padding: 12px;
+
+  background: #fff;
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.stats-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+  color: #fff;
+}
+
+.stats-content {
+  min-width: 0;
+}
+
+.stats-title {
+  display: block;
+
+  margin-bottom: 2px;
+
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.stats-content h2 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ========================================
+   MEDIA QUERIES
+======================================== */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 16px;
+  }
+
+  .contact-card .avatar {
+    width: 58px;
+    height: 58px;
+
+    font-size: 1.5rem;
+  }
+
+  .contact-name {
+    font-size: 1rem;
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+  }
+
+  .action-icons {
+    gap: 18px;
+    font-size: 1rem;
+  }
+
+  .stats-card {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .stats-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .stats-title {
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+
+  .stats-content h2 {
+    font-size: 24px;
+  }
+}
