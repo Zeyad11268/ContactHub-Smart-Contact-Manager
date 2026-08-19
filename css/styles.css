@@ -107,7 +107,10 @@ main {
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-sm) !important;
   box-shadow: 0 6px 14px rgba(91, 67, 232, 0.18);
-  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .add-btn:hover,
@@ -160,7 +163,10 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .stats-card:hover {
@@ -248,7 +254,9 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm) !important;
   box-shadow: var(--shadow-sm);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 #searchInput::placeholder {
@@ -272,7 +280,10 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm) !important;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .contact-card:hover {
@@ -422,7 +433,10 @@ main {
   height: 38px;
   border: 0;
   border-radius: 10px;
-  transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .phone-btn {
@@ -461,7 +475,11 @@ main {
   border: 1px solid transparent;
   border-radius: 9px;
   cursor: pointer;
-  transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .icon-action:hover,
@@ -653,7 +671,9 @@ main {
   height: 36px;
   border: 0;
   border-radius: 10px;
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .call-btn-green {
@@ -775,7 +795,9 @@ main {
   border: 1px solid var(--color-border);
   border-radius: 10px;
   font-size: 0.9rem;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .form-control::placeholder {
@@ -874,7 +896,10 @@ textarea.form-control {
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: 700;
-  transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .upload-btn:hover,
@@ -890,7 +915,11 @@ textarea.form-control {
   border-color: var(--color-primary);
   border-radius: 10px;
   font-size: 0.9rem;
-  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .save-btn:hover,
@@ -1111,7 +1140,6 @@ textarea:focus-visible,
   }
 }
 
-
 /* Phase 3: list controls, details, and recently added */
 .management-toolbar {
   display: flex;
@@ -1179,7 +1207,11 @@ textarea:focus-visible,
   cursor: pointer;
   font-size: 0.72rem;
   font-weight: 700;
-  transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .view-details-btn:hover,
@@ -1430,7 +1462,6 @@ textarea:focus-visible,
   }
 }
 
-
 .row-details-btn {
   display: flex;
   align-items: center;
@@ -1443,7 +1474,10 @@ textarea:focus-visible,
   border: 1px solid #ddd8ff;
   border-radius: 9px;
   cursor: pointer;
-  transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .row-details-btn:hover,
@@ -1453,7 +1487,6 @@ textarea:focus-visible,
   border-color: var(--color-primary);
   transform: translateY(-1px);
 }
-
 
 /* Compact contact card redesign */
 .compact-contact-card {
@@ -1551,7 +1584,10 @@ textarea:focus-visible,
   font-size: 0.75rem;
   font-weight: 700;
   text-decoration: none;
-  transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .compact-call-btn:hover,
@@ -1628,12 +1664,14 @@ textarea:focus-visible,
   }
 }
 
-
 /* Modern Smart Card status layout */
 .smart-contact-card {
   border-color: #e5e7f0;
   background: linear-gradient(180deg, #ffffff 0%, #fbfbfe 100%);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .smart-contact-card:hover {
@@ -1679,7 +1717,10 @@ textarea:focus-visible,
   border: 0;
   border-radius: 8px;
   cursor: pointer;
-  transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .smart-status-btn:hover,
@@ -1720,7 +1761,6 @@ textarea:focus-visible,
     height: 28px;
   }
 }
-
 
 /* Sidebar widgets and contact card polish */
 .card-wrapper {
@@ -1821,7 +1861,11 @@ textarea:focus-visible,
   background: #fcfcfe;
   border: 1px solid #eef0f6;
   border-radius: 14px;
-  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .widget-contact-item:hover {
@@ -1885,7 +1929,10 @@ textarea:focus-visible,
   height: 29px;
   border-radius: 9px;
   font-size: 0.68rem;
-  transition: color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .widget-view-btn {
@@ -1947,7 +1994,11 @@ textarea:focus-visible,
   border: 1px solid #eef0f6;
   border-radius: 14px;
   cursor: pointer;
-  transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .recent-contact-item:hover,
@@ -2066,7 +2117,6 @@ textarea:focus-visible,
     padding: 12px 16px !important;
   }
 }
-
 
 /* Smart Chic green identity and theme system */
 :root {
@@ -2368,7 +2418,6 @@ html[data-theme="dark"] .smart-contact-card .view-details-btn:focus-visible {
   background: #daf1de;
   border-color: #daf1de;
 }
-
 
 /* Navy Yellow Smart Chic identity */
 :root {
@@ -2849,7 +2898,6 @@ html[data-theme="dark"] .modal-footer {
 html[data-theme="dark"] .btn-close {
   filter: invert(1) grayscale(1);
 }
-
 
 /* Turquoise Smart SaaS redesign */
 :root {
@@ -3462,7 +3510,6 @@ html[data-theme="dark"] .btn-close {
   }
 }
 
-
 /* Widget header refinement */
 .widget-header {
   position: relative;
@@ -3479,7 +3526,11 @@ html[data-theme="dark"] .btn-close {
   inset: auto 0 0;
   height: 3px;
   content: "";
-  background: linear-gradient(90deg, rgba(0, 166, 192, 0.9), rgba(0, 166, 192, 0));
+  background: linear-gradient(
+    90deg,
+    rgba(0, 166, 192, 0.9),
+    rgba(0, 166, 192, 0)
+  );
   opacity: 0.9;
 }
 
